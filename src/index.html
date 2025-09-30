@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Course Class</title>
+
+  <script>
+    // Aktifkan dark mode otomatis sesuai sistem
+    tailwind.config = {
+      darkMode: 'media', // atau 'class' jika ingin toggle manual
+    }
+  </script>
+
+<style>
+    .lazy-fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .lazy-fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-purple-200 min-h-screen flex flex-col">
+  <!-- Header & Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <span class="text-2xl font-extrabold text-purple-700">Course<span class="text-blue-500">Class</span></span>
+      </div>
+      <nav>
+        <button id="menu-btn" class="md:hidden text-2xl text-purple-700 focus:outline-none">
+          &#9776;
+        </button>
+        <ul id="nav-menu" class="hidden md:flex space-x-8 font-semibold text-gray-700">
+          <li><a href="#free" class="hover:text-purple-600 transition">Free Course</a></li>
+          <li><a href="#" class="hover:text-purple-600 transition">Premium Course</a></li>
+          <li><a href="#" class="hover:text-purple-600 transition">About Me</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <ul id="mobile-menu" class="md:hidden hidden flex-col bg-white px-4 py-2 space-y-2 font-semibold text-gray-700 shadow lazy-fade">
+      <li><a href="#free" class="hover:text-purple-600 transition">Free Course</a></li>
+      <li><a href="#" class="hover:text-purple-600 transition">Premium Course</a></li>
+      <li><a href="#" class="hover:text-purple-600 transition">About Me</a></li>
+    </ul>
+  </header>
+
+  <!-- Jumbotron -->
+  <section class="flex-1 flex items-center justify-center">
+    <div class="text-center py-16 px-4">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-purple-700 mb-4 drop-shadow-lg">Welcome to Course Class</h1>
+      <p class="text-xl md:text-2xl text-gray-700 mb-8">Belajar dengan mudah, mulai dari Free hingga Premium Course. Temukan passion dan skill baru bersama kami!</p>
+      <a href="#" class="bg-purple-600 text-white px-8 py-3 rounded-full shadow-lg hover:bg-purple-700 transition font-bold text-lg">Get Started</a>
+    </div>
+  </section>
+
+  <!-- photo -->
+  <section class="container mx-auto px-4 py-8 lazy-fade">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+        <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80" alt="Free Course" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-purple-700 mb-2">Free Course</h3>
+          <p class="text-gray-600 text-sm">Akses materi gratis untuk mulai belajar skill baru tanpa biaya.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Premium Course" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-purple-700 mb-2">Premium Course</h3>
+          <p class="text-gray-600 text-sm">Dapatkan akses eksklusif ke materi premium dan mentor profesional.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+        <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80" alt="About Me" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold text-purple-700 mb-2">About Me</h3>
+          <p class="text-gray-600 text-sm">Kenali lebih dekat pengajar dan tim Course Class yang inspiratif.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistic Section -->
+  <section class="lazy-fade mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
+        <div class="text-purple-700 text-4xl font-extrabold mb-2">120+</div>
+        <div class="text-gray-700 font-semibold mb-1">Free Courses</div>
+        <div class="text-gray-500 text-sm">Materi gratis yang bisa diakses kapan saja</div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
+        <div class="text-blue-500 text-4xl font-extrabold mb-2">50+</div>
+        <div class="text-gray-700 font-semibold mb-1">Premium Courses</div>
+        <div class="text-gray-500 text-sm">Kelas premium dengan mentor profesional</div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
+        <div class="text-green-500 text-4xl font-extrabold mb-2">10K+</div>
+        <div class="text-gray-700 font-semibold mb-1">Active Students</div>
+        <div class="text-gray-500 text-sm">Siswa aktif yang belajar setiap hari</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail Free Course -->
+  <section class="lazy-fade mx-auto px-4 py-8">
+    <div id="free"  class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-purple-700 mb-4">Tentang Free Course</h2>
+      <p class="text-gray-700 text-base md:text-lg mb-2">
+        Free Course adalah program pembelajaran gratis yang dirancang untuk semua kalangan. Materi disusun oleh pengajar berpengalaman dan dapat diakses kapan saja tanpa biaya. Cocok untuk pemula yang ingin mulai belajar skill baru secara mandiri.
+      </p>
+      <ul class="list-disc pl-6 text-gray-600">
+        <li>Akses materi tanpa batas</li>
+        <li>Video pembelajaran berkualitas</li>
+        <li>Forum diskusi komunitas</li>
+        <li>Sertifikat penyelesaian gratis</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Grid Masuk Kelas Free Course -->
+  <section class="lazy-fade mx-auto px-4 py-8">
+    <h2 class="text-2xl md:text-3xl font-bold text-purple-600 mb-6 text-center">Pilih Kelas Free Course</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Dasar HTML" class="w-20 h-20 object-cover rounded-full mb-4">
+        <h3 class="text-lg font-bold text-blue-700 mb-2">Dasar HTML</h3>
+        <p class="text-gray-600 text-sm mb-4 text-center">Belajar struktur dasar HTML untuk pemula.</p>
+        <button class="bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition">Masuk Kelas</button>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" alt="Dasar CSS" class="w-20 h-20 object-cover rounded-full mb-4">
+        <h3 class="text-lg font-bold text-blue-700 mb-2">Dasar CSS</h3>
+        <p class="text-gray-600 text-sm mb-4 text-center">Pelajari cara mempercantik tampilan website dengan CSS.</p>
+        <button class="bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition">Masuk Kelas</button>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Dasar JavaScript" class="w-20 h-20 object-cover rounded-full mb-4">
+        <h3 class="text-lg font-bold text-blue-700 mb-2">Dasar JavaScript</h3>
+        <p class="text-gray-600 text-sm mb-4 text-center">Mulai belajar pemrograman interaktif dengan JavaScript.</p>
+        <button class="bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition">Masuk Kelas</button>
+      </div>
+    </div>
+  </section>
+
+<!-- Detail Premium Course -->
+  <section class="lazy-fade mx-auto px-4 py-8">
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-700 mb-4">Tentang Premium Course</h2>
+      <p class="text-gray-700 text-base md:text-lg mb-2">
+        Premium Course adalah program pembelajaran berbayar dengan materi eksklusif dan pendampingan langsung dari mentor profesional. Cocok untuk kamu yang ingin memperdalam skill dan mendapatkan pengalaman belajar yang lebih intensif.
+      </p>
+      <ul class="list-disc pl-6 text-gray-600">
+        <li>Materi eksklusif dan terstruktur</li>
+        <li>Mentoring dan konsultasi langsung</li>
+        <li>Project nyata dan studi kasus</li>
+        <li>Sertifikat premium setelah lulus</li>
+        <li>Akses komunitas alumni</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Grid Pembelian Kelas -->
+  <section class="lazy-fade mx-auto px-4 py-8">
+    <h2 class="text-2xl md:text-3xl font-bold text-blue-600 mb-6 text-center">Pilih Kelas Premium</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Web Development" class="w-24 h-24 object-cover rounded-full mb-4">
+        <h3 class="text-lg font-bold text-purple-700 mb-2">Web Development</h3>
+        <p class="text-gray-600 text-sm mb-4 text-center">Belajar membuat website modern dari nol hingga mahir.</p>
+        <span class="text-blue-500 font-bold text-xl mb-2">Rp 299.000</span>
+        <button class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition">Beli Kelas</button>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+        <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=400&q=80" alt="UI/UX Design" class="w-24 h-24 object-cover rounded-full mb-4">
+        <h3 class="text-lg font-bold text-purple-700 mb-2">UI/UX Design</h3>
+        <p class="text-gray-600 text-sm mb-4 text-center">Pelajari desain antarmuka dan pengalaman pengguna terbaik.</p>
+        <span class="text-blue-500 font-bold text-xl mb-2">Rp 249.000</span>
+        <button class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition">Beli Kelas</button>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Digital Marketing" class="w-24 h-24 object-cover rounded-full mb-4">
+        <h3 class="text-lg font-bold text-purple-700 mb-2">Digital Marketing</h3>
+        <p class="text-gray-600 text-sm mb-4 text-center">Strategi pemasaran digital untuk bisnis dan karier Anda.</p>
+        <span class="text-blue-500 font-bold text-xl mb-2">Rp 199.000</span>
+        <button class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition">Beli Kelas</button>
+      </div>
+    </div>
+  </section>
+<!-- ...existing code... -->
+
+<div class="max-w-3xl mx-auto px-6 py-12">
+    <!-- About Me Section -->
+    <section class="bg-white shadow-md rounded-lg p-8 mb-10 lazy-fade">
+      <h2 class="text-3xl font-bold mb-4 text-gray-800">About Me</h2>
+      <p class="text-gray-700 text-lg">
+        Halo! Saya adalah seorang pengembang web yang berdedikasi dan senang membangun website yang fungsional dan estetis. Saya memiliki minat dalam desain UI/UX, pengembangan front-end, dan teknologi terbaru di dunia web.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-white shadow-md rounded-lg p-8 lazy-fade">
+      <h2 class="text-2xl font-semibold mb-6 text-gray-800">Contact</h2>
+      <ul class="space-y-4 text-gray-700 text-md">
+        <li><strong>Email:</strong> <a href="mailto:youremail@example.com" class="text-blue-500 hover:underline">youremail@example.com</a></li>
+        <li><strong>Telepon:</strong> +62 812 3456 7890</li>
+        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/username" target="_blank" class="text-blue-500 hover:underline">linkedin.com/in/username</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/username" target="_blank" class="text-blue-500 hover:underline">github.com/username</a></li>
+      </ul>
+    </section>
+  </div>
+
+<!-- Footer -->
+  <footer class="bg-white shadow-inner py-4 mt-auto lazy-fade">
+    <div class="container mx-auto px-4 flex justify-center items-center">
+      <span class="text-gray-600 text-sm flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12a8 8 0 11-16 0 8 8 0 0116 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16v-4m0-4h.01" />
+        </svg>
+         &copy; LABIB,Allright reversed
+      </span>
+    </div>
+  </footer>
+
+  <!-- Hamburger Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('.lazy-fade').forEach(el => observer.observe(el));
+  </script>
+</body>
